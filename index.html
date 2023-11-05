@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <title>Responsive Card and Grid</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html , body{
+            height: 100%;
+            width: 100%;
+            font-family: gilroy;
+        }
+        /* Custom CSS */
+        .custom-card {
+            position: relative;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            transition: transform 0.2s;
+        }
+
+        .custom-card::before {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 15px;
+            background-image: linear-gradient(45deg, #ff0000, #ff8000, #ff0000);
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 0.3s;
+        }
+
+        .custom-image {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            overflow: hidden;
+        }
+
+        .custom-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .custom-card-content {
+            padding: 1.5rem;
+        }
+
+        /* Hover Effect */
+        .custom-card:hover {
+            transform: scale(1.05);
+        }
+
+        .custom-card:hover::before {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="text-center mt-4">Responsive Card and Grid</h1>
+
+    <!-- Responsive Grid Layout -->
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <!-- Card 1 -->
+            <div class="card mb-4">
+                <div class="card custom-card">
+                <img src="https://media.licdn.com/dms/image/D5622AQFTfWQuG6CNBg/feedshare-shrink_800/0/1697371272150?e=1701907200&v=beta&t=SQtOra3ovA_P-0E1DmFUViRd4gCps02qQJe1UguVJ-A" class="card-img-top" alt="Image 1">
+                </div>
+                <div class="card-body">
+                    <div class="custom-card-content">
+                      <h5 class="card-title">"Intern for Data Science📅"</h5>
+                      <p class="card-text">If you're passionate about pushing the boundaries of technology, exploring data to uncover insights, and creating impactful solutions, we want to hear from you! 🌐</p>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <!-- Card 2 -->
+            <div class="card mb-4">
+                <div class="card custom-card">
+                 <img src="https://media.licdn.com/dms/image/D5622AQEuIPP1WmWCIQ/feedshare-shrink_800/0/1697371225414?e=1701907200&v=beta&t=EtVLP8cz0e3pUle9jWl6D4zFu_dXndEkrs-G_nzcnIY" class="card-img-top" alt="Image 2">
+                </div>
+                <div class="card-body">
+                    <div class="custom-card-content">
+                        <h5 class="card-title"> "Intern for Web Development👨‍💻"</h5>
+                         <p class="card-text">Don't miss this opportunity to kick-start your career in a vibrant and collaborative environment. Apply now, and let's shape the future together! 🚀  </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <!-- Card 3 -->
+            <div class="card mb-4">
+                <div class="card custom-card">
+                <img src="https://media.licdn.com/dms/image/D5622AQExIwhlbK_afQ/feedshare-shrink_800/0/1697371340913?e=1701907200&v=beta&t=Jhcien_kcbq4VcbrgGNvQ3RBhzt4Q9kfudddnMiyNqs" class="card-img-top" alt="Image 3">
+                </div>
+                <div class="card-body">
+                    <div class="custom-card-content">
+                      <h5 class="card-title">"Intern for Machine Learning"🤖</h5>
+                       <p class="card-text">We're thrilled to announce that Cognifyz Technologies is on the lookout for talented interns to join our dynamic team! 🚀</p>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
